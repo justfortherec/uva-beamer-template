@@ -68,5 +68,6 @@ Issues
  * Only elements present in the example presentation have been tested.
    Any other elements might look horrible.
    Feel free to add your own styles and send me pull requests.
+ * Non-default aspect ratios and page sizes are not tested.
 
 
