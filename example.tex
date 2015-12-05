@@ -34,7 +34,7 @@
 % 	maincolor: Select which main color to use for title page and as highlight color.
 %		Possible values are: Any color definition. Default: uva-rood
 % 		This theme pre-defines colors from the University of Amsterdam corporate identity:
-% 			uva-zwaart	(general UvA Black)
+% 			uva-zwart	(general UvA Black)
 % 			uva-rood	(general UvA Red)
 % 			uva-feb-groen	(Green for Faculty of Economics and Business)
 % 			uva-fgw-blauw	(Blue for Faculty of Humanities)
@@ -43,7 +43,7 @@
 % 			uva-fnwi-paars	(Purple for Faculty of Science)
 % 			uva-fmg-oranje	(Orange for Faculty of Social and Behavioural Sciences)
 % 			uva-iis-licht-blauw	(Light Blue for Institute of Interdisciplinary Studies)
-% 			uva-ilo-root	(Red for Interfacultaire Lerarenopleidingen)
+% 			uva-ilo-rood	(Red for Interfacultaire Lerarenopleidingen)
 % 		Please refer to the following page for usage instructions regarding the
 % 		corporate identity colors: https://extranet.uva.nl/en/a-z/content/corporate-communication/corporate-identity-elements/colour/colour-kopie.html
 \usetheme[logo=ENG, maincolor=uva-rood]{UniversityOfAmsterdam}
@@ -74,7 +74,7 @@
 	\begin{tikzpicture}
 		\edef\posX{0}
 		\edef\posY{11}
-		\foreach \color in {uva-zwaart, uva-rood, uva-feb-groen, uva-fgw-blauw, uva-fdr-donker-rood, uva-gen-groen, uva-fnwi-paars, uva-fmg-oranje, uva-iis-licht-blauw, uva-ilo-root} {
+		\foreach \color in {uva-zwart, uva-rood, uva-feb-groen, uva-fgw-blauw, uva-fdr-donker-rood, uva-gen-groen, uva-fnwi-paars, uva-fmg-oranje, uva-iis-licht-blauw, uva-ilo-rood} {
 			\node [fill=\color, text=white] (\color) at (\posX, \posY) {\color};
 
 			\pgfmathparse{\posX+1}

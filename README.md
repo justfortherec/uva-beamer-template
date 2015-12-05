@@ -47,7 +47,7 @@ The corporate identity of the University of Amsterdam
 [defines some colors](https://extranet.uva.nl/en/a-z/content/corporate-communication/corporate-identity-elements/colour/colour-kopie.html).
 These colors are available when the template is loaded:
 
- * `uva-zwaart`: general UvA Black
+ * `uva-zwart`: general UvA Black
  * `uva-rood`: general UvA Red
  * `uva-feb-groen`: Green for Faculty of Economics and Business
  * `uva-fgw-blauw`: Blue for Faculty of Humanities
@@ -56,7 +56,7 @@ These colors are available when the template is loaded:
  * `uva-fnwi-paars`: Purple for Faculty of Science
  * `uva-fmg-oranje`: Orange for Faculty of Social and Behavioural Sciences
  * `uva-iis-licht-blauw`: Light Blue for Institute of Interdisciplinary Studies
- * `uva-ilo-root`: Red for Interfacultaire Lerarenopleidingen
+ * `uva-ilo-rood`: Red for Interfacultaire Lerarenopleidingen
 
 When used together with the `logo` option, these colors can help creating
 a presentation which looks very similar to UvA's PowerPoint template.
