@@ -7,6 +7,15 @@ belong to the University of Amsterdam. Please refer to
 [their style guide](https://extranet.uva.nl/en/a-z/content/corporate-communication/corporate-communication.html)
 for further information.
 
+![Title page of LaTeX beamer template for University of Amsterdam](example-images/0_universityofamsterdam_latex_beamer_title.png)
+![Outline in a LaTeX beamer template for University of Amsterdam](example-images/1_universityofamsterdam_latex_beamer_outline.png)
+![Pre-defined colors in LaTeX beamer template for University of Amsterdam](example-images/2_universityofamsterdam_latex_beamer_colors.png)
+![Lists in a LaTeX beamer template for University of Amsterdam](example-images/3_universityofamsterdam_latex_beamer_lists.png)
+![Block elements in a LaTeX beamer template for University of Amsterdam](example-images/4_universityofamsterdam_latex_beamer_blocks.png)
+![More block elements in a LaTeX beamer template for University of Amsterdam](example-images/5_universityofamsterdam_latex_beamer_blocks.png)
+![A plain frame in a LaTeX beamer template for University of Amsterdam](example-images/6_universityofamsterdam_latex_beamer_plain.png)
+![A frame in a LaTeX beamer template for University of Amsterdam](example-images/7_universityofamsterdam_latex_beamer_sections.png)
+
 Options
 -------
 
@@ -37,6 +46,7 @@ Pre-defined colors
 The corporate identity of the University of Amsterdam
 [defines some colors](https://extranet.uva.nl/en/a-z/content/corporate-communication/corporate-identity-elements/colour/colour-kopie.html).
 These colors are available when the template is loaded:
+
  * `uva-zwaart`: general UvA Black
  * `uva-rood`: general UvA Red
  * `uva-feb-groen`: Green for Faculty of Economics and Business
@@ -58,4 +68,5 @@ Issues
  * Only elements present in the example presentation have been tested.
    Any other elements might look horrible.
    Feel free to add your own styles and send me pull requests.
+
 
