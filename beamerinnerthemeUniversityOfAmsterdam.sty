@@ -31,7 +31,7 @@
 \ProcessOptionsBeamer
 
 % Select logo according to option
-\logo{\includegraphics[width=4cm]{beamerthemeUniversityOfAmsterdam/logo/uva_logo_\beamer@innerthemeUniversityOfAmsterdam@logo.pdf}}
+\logo{\includegraphics[width=37.5mm]{beamerthemeUniversityOfAmsterdam/logo/uva_logo_\beamer@innerthemeUniversityOfAmsterdam@logo.pdf}}
 
 % Rectangular blocks without shadow
 \setbeamertemplate{blocks}[default]
@@ -49,19 +49,20 @@
 \else % Only if frame is not plain
 	\begin{tikzpicture}[remember picture,overlay, every node/.style={inner sep=0,outer sep=0}]
 		% UvA logo
-		\node [anchor=north west, xshift=6pt, yshift=-10pt] (logo) at (0, 0) {\insertlogo};
+		\node [anchor=north west, xshift=11.8pt, yshift=-11.2pt] (logo) at (0, 0) {\insertlogo};
 	
 		% Position of divide between logo and grey box in pt
-		\pgfmathsetmacro{\divide}{-33};
+		\pgfmathsetmacro{\divide}{-35};
+		\pgfmathsetmacro{\dividelength}{118.3}
 
 		% Margin around box in pt
-		\pgfmathsetmacro{\margin}{10};
+		\pgfmathsetmacro{\margin}{11.5};
 
 		% Boordinates for box and line
 		\coordinate (boxstart) at (\margin pt, \divide pt);
 		\coordinate [xshift=-\margin pt, yshift=\margin pt] (boxend) at (current page.south east);
 		\coordinate (linestart) at (0pt, \divide pt);
-		\coordinate (lineend)  at (123.5pt, \divide pt);
+		\coordinate (lineend)  at (\dividelength pt, \divide pt);
 
 		% Grey box
 		\fill [bgarea] (boxstart) rectangle (boxend);
@@ -70,7 +71,7 @@
 		\draw (lineend) -- (linestart);
 
 		% San Andreas crosses
-		\node [anchor=south east] (crosses) at (boxend) {\includegraphics[ scale=0.25, clip=true, trim={0pt 400pt 40pt 0pt}]{beamerthemeUniversityOfAmsterdam/backgrounds/crosses.pdf}};
+		\node [anchor=south east] (crosses) at (boxend) {\includegraphics[scale=0.1265, clip=true, trim={0pt 700pt 14pt 0pt}]{beamerthemeUniversityOfAmsterdam/backgrounds/crosses.pdf}};
 	\end{tikzpicture}%
 \fi
 }
@@ -83,19 +84,20 @@
 	% Draw title page
 	\begin{tikzpicture}[remember picture,overlay, every node/.style={inner sep=0,outer sep=0}]	
 		% Show UvA logo
-		\node [anchor=north west, xshift=6pt, yshift=-10pt] (logo) at (current page.north west) {\insertlogo};
+		\node [anchor=north west, xshift=11.8pt, yshift=-11.2pt] (logo) at (current page.north west) {\insertlogo};
 
 		% Position of line below logo in pt
-		\pgfmathsetmacro{\divide}{-33};
+		\pgfmathsetmacro{\divide}{-35};
+		\pgfmathsetmacro{\dividelength}{118.3}
 
 		% Margin around boxes in pt
-		\pgfmathsetmacro{\margin}{10};
+		\pgfmathsetmacro{\margin}{11.5};
 
 		% Coordinates for box and line
 		\coordinate [yshift=-70pt] (boxstart) at (current page.north west);
 		\coordinate [xshift=-\margin pt, yshift=\margin pt] (boxend) at (current page.south east);
 		\coordinate [yshift=\divide pt] (linestart) at (current page.north west);
-		\coordinate [xshift=123.5pt, yshift=\divide pt] (lineend)  at (current page.north west);
+		\coordinate [xshift=\dividelength pt, yshift=\divide pt] (lineend)  at (current page.north west);
 
 		% Main colored box
 		\fill [maincolor] (boxstart) rectangle (boxend);
@@ -104,21 +106,21 @@
 		\draw (lineend) -- (linestart);
 
 		% San Andreas crosses
-		\node [xshift=-\margin pt, anchor=east] (crosses) at (current page.east) {\includegraphics[ scale=0.25, clip=true, trim={0pt 100pt 40pt 0pt}]{beamerthemeUniversityOfAmsterdam/backgrounds/crosses.pdf}};
+		\node [xshift=-\margin pt, anchor=east] (crosses) at (current page.east) {\includegraphics[scale=0.1265, clip=true, trim={0pt 32pt 14pt 0pt}] {beamerthemeUniversityOfAmsterdam/backgrounds/crosses.pdf}};
 
 		% Box behind title
-		\coordinate [xshift=\margin pt, yshift=-40pt] (titlebgstart) at (current page.west);
+		\coordinate [xshift=\margin pt, yshift=-29pt] (titlebgstart) at (current page.west);
 		\coordinate [yshift=12pt] (titlebgend) at (boxend);
 		\fill [title.bg] (titlebgstart) rectangle (titlebgend);
 
 		% Grey stripe below title
-		\coordinate [yshift=-63pt] (greybarstart) at (titlebgstart);
-		\coordinate [yshift=-5pt] (greybarend) at (titlebgend);
+		\coordinate [xshift=\margin pt, yshift=35pt] (greybarstart) at (current page.south west);
+		\coordinate [yshift=-6pt] (greybarend) at (titlebgend);
 		\fill [black, opacity=.35] (greybarstart) rectangle (greybarend);
 
 		% Title information
 		% Institute
-		\node [xshift=23pt, yshift=-10pt, anchor=north west] (institute) at (linestart) {\usebeamerfont{institute}\usebeamercolor[fg]{institute}\insertinstitute};
+		\node [xshift=26.5pt, yshift=-5pt, anchor=north west] (institute) at (linestart) {\usebeamerfont{institute}\usebeamercolor[fg]{institute}\insertinstitute};
 
 		% Title
 		\node [xshift=10pt, yshift=-10pt, anchor=north west] (title) at (titlebgstart) 
@@ -134,13 +136,14 @@
 			\else\insertsubtitle\fi
 			\end{varwidth}};
 
+		\pgfmathsetmacro{\authoranddatetop}{-3}
 		% Authors
-		\node [xshift=10pt, yshift=-4pt, anchor=north west] (author) at (greybarstart) 
+		\node [xshift=10pt, yshift=\authoranddatetop pt, anchor=north west] (author) at (greybarstart)
 		{\usebeamercolor[fg]{author}\usebeamerfont{author}
 			\ifx\insertsubtitle\empty\else\insertauthor\fi};
 
 		% Date
-		\node [xshift=\textwidth, yshift=-4pt, align=right, anchor=north east] (date) at (greybarstart)
+		\node [xshift=\textwidth, yshift=\authoranddatetop pt, align=right, anchor=north east] (date) at (greybarstart)
 		{\usebeamercolor[fg]{date}\usebeamerfont{date}\insertdate};
 	\end{tikzpicture}%
 }

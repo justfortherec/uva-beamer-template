@@ -31,7 +31,7 @@ The following parameters can be defined when loading the template with `\usetemp
     elements such as `alert`ed text, examples, and the footer.
 
 Next to the regular template `University of Amsterdam` for `frametitle`s,
-there is also a version which safes some space by placing both frame title
+there is also a version which saves some space by placing both frame title
 and subtitle on one line. It can be used with the following command:
 
 ```
@@ -58,16 +58,18 @@ These colors are available when the template is loaded:
  * `uva-iis-licht-blauw`: Light Blue for Institute of Interdisciplinary Studies
  * `uva-ilo-rood`: Red for Interfacultaire Lerarenopleidingen
 
-When used together with the `logo` option, these colors can help creating
+When used together with the `maincolor` option, these colors can help creating
 a presentation which looks very similar to UvA's PowerPoint template.
+Just set `maincolor` to the color of your faculty.
 
 Issues
 ------
 
- * Contrast for some pre-defined colors might be to low.
  * Only elements present in the example presentation have been tested.
    Any other elements might look horrible.
    Feel free to add your own styles and send me pull requests.
- * Non-default aspect ratios and page sizes are not tested.
-
+ * Files in `beamerthemeUniversityOfAmsterdam/` have to be kept in the
+   working directory even when this theme is installed system wide.
+   I've tried creating the logo and the background crosses in TikZ.
+   However compiling presentations gets prohibitively long with them.
 
