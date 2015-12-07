@@ -122,19 +122,27 @@
 		% Institute
 		\node [xshift=26.5pt, yshift=-5pt, anchor=north west] (institute) at (linestart) {\usebeamerfont{institute}\usebeamercolor[fg]{institute}\insertinstitute};
 
-		% Title
-		\node [xshift=10pt, yshift=-10pt, anchor=north west] (title) at (titlebgstart) 
-		{\begin{varwidth}{\textwidth}
-			\usebeamerfont{title}\usebeamercolor[fg]{title}\inserttitle
-			\end{varwidth}};
-
-		% Subtitle
-		\node [xshift=10pt, yshift=-45pt, anchor=north west] (subtitle) at (titlebgstart) 
-		{\begin{varwidth}{\textwidth}
-			\usebeamerfont{subtitle}\usebeamercolor[fg]{subtitle}
-			\ifx\insertsubtitle\empty\insertauthor
-			\else\insertsubtitle\fi
-			\end{varwidth}};
+		% Title and subtitle
+		\node [
+			xshift=10pt,
+			yshift=-10pt,
+			anchor=north west,
+			text width=\textwidth,
+			] (title) at (titlebgstart)
+		{ %
+			{%
+				\usebeamercolor[fg]{title}\usebeamerfont{title}%
+				\inserttitle\par
+			}
+			\vspace{1ex}
+			{%
+				\usebeamercolor[fg]{subtitle}\usebeamerfont{subtitle}%
+				% Insert author if no subtitle is given
+				\ifx\insertsubtitle\empty\insertauthor
+				\else\insertsubtitle\fi
+				\par
+			}
+		};
 
 		\pgfmathsetmacro{\authoranddatetop}{-3}
 		% Authors
